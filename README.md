@@ -25,15 +25,19 @@ Installing
   *Replace this appropriately depending on your operating system.
 3. Create the tables in bucket.sql. You may need the arguments `--user=root --password` in order for it
 to work.
-    ```$ mysqladmin create bucket
+    ```
+    $ mysqladmin create bucket
     $ mysql -D bucket < bucket.sql
-    $ mysql -D bucket < sample.sql```
+    $ mysql -D bucket < sample.sql
+    ```
 4. Create a user for Bucket, and grant all perms on the bucket database.
     `$ echo 'grant all on bucket.* to bucket identified by "s3kr1tP@ss"' | mysql`
 5. Edit config file (bucket.yml)
 6. Install perl modules.
-    ```$ sudo cpan POE POE::Component::IRC POE::Component::SimpleDBI Lingua::EN::Conjugate Lingua::EN::Inflect 
-    Lingua::EN::Syllable YAML HTML::Entities URI::Escape XML::Simple```
+    ```
+    $ sudo cpan POE POE::Component::IRC POE::Component::SimpleDBI Lingua::EN::Conjugate Lingua::EN::Inflect 
+    Lingua::EN::Syllable YAML HTML::Entities URI::Escape XML::Simple
+    ```
 7. Set bucket.pl as executable.
     `$ chmod +x bucket.pl`
 8. Pre-flight checklist

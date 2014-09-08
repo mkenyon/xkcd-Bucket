@@ -189,7 +189,8 @@ sub db_success {
                                    \s+ does
                                    \s+ (\S+) # nick
                                    \s+ (\w+) # verb
-                                   (?:.*) # more }xi
+                                   (?:.*) # more 
+                                 }xi
           )
         {
             my ( $inter, $member, $verb, $more ) = ( $1, $2, $3, $4 );
